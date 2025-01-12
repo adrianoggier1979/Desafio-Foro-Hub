@@ -83,4 +83,8 @@ public class Topico {
     public List<Respuesta> getRespuestas() {
         return respuestas;
     }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 }
