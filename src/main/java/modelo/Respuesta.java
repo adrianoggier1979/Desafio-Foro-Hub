@@ -48,4 +48,28 @@ public class Respuesta {
         }
 
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Topico getTopico() {
+        return topico;
+    }
+
+    public Usuario getAutor() {
+        return autor;
+    }
+
+    public String getMensaje(){
+        return mensaje;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public Boolean getSolucion() {
+        return solucion;
+    }
 }
