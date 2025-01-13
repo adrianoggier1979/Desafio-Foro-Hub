@@ -62,19 +62,3 @@ public class TokenService {
         return LocalDateTime.now().plusHours(numeroHrs).toInstant(ZoneOffset.of("-06:00"));
     }
 }
-//            DecodedJWT decodedJWT = JWT.require(algorithm)
-//                    .withIssuer("foro alura")
-//                    .build()
-//                    .verify(token);
-//            verifier.getSubject();
-//        } catch (JWTVerificationException exception){
-//            throw new RuntimeException();
-//        }
-//        return verifier.getSubject();
-//    }
-//
-//    private Instant generarFecheExpiration(Integer numeroHrs){
-//        return LocalDateTime.now().plusHours(numeroHrs).toInstant(ZoneOffset.of("-06:00"));
-//
-//    }
-//}
