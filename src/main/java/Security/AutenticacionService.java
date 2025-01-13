@@ -1,4 +1,4 @@
-package AutenticacionService;
+package Security;
 
 import Repository.UsuarioRepository;
 import org.springframework.security.core.userdetails.UserDetails;
