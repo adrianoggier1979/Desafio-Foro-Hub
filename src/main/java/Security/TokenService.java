@@ -15,7 +15,7 @@ import java.security.AlgorithmConstraints;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-
+import java.util.Date;
 
 //import static org.springframework.security.config.Elements.JWT;
 
@@ -32,6 +32,7 @@ public class TokenService {
                     .withIssuer("foro alura")
                     .withSubject(usuario.getEmail())
                     .withClaim("id", usuario.getId())
+                    .withExpiresAt(Date.from(generarFecheExpiration(2)))
                     .sign(algorithm);
 
 
@@ -45,7 +46,7 @@ public class TokenService {
         if (token == null){
             throw new RuntimeException();
         }
-        //DecodedJWT verifier = null;
+
         try {
             Algorithm algorithm = Algorithm.HMAC256(apiSecret);
             JWTVerifier verifier = JWT.require(algorithm)
